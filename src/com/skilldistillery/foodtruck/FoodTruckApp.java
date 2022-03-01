@@ -23,12 +23,24 @@ public class FoodTruckApp {
 			System.out.println("Please enter the food type: ");
 			String foodType = sc.next();
 				
-			//Prompt the user to input the rating for gdfood trucks.
-			System.out.println("Please rate this truck (choose between number 1 to number 5 - for one star to five star): ");
+			//Prompt the user to input the rating for food trucks.
+			System.out.println("Please rate this truck (choose between 1 to 5 - for 1 star to 5 star): ");
 			int truckRating = sc.nextInt();
 			
 			//Set the FoodTruck object's fields to the user's input, and add them to the array.
 			foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
+			
+			
+		}
+		
+		//List of all existing food trucks.
+		System.out.println("\n");
+		System.out.println("List of all existing food trucks: \n");
+		
+		for (int i = 0; i < foodTruckArray.length; i++) {
+			
+			String foodTruckData = foodTruckArray [i].toString();
+		    System.out.println(foodTruckData);
 			
 		}
 
