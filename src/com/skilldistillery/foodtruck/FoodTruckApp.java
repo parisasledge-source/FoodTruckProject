@@ -1,12 +1,27 @@
 package com.skilldistillery.foodtruck;
 
+import java.util.Scanner;
 
 public class FoodTruckApp {
 
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
+//		Prompt the user to input the food name.
+		System.out.println("Please enter the food name: ");
+		String foodName = sc.next();
+		
+//		Prompt the user to input the food type.
+		System.out.println("Please enter the food type: ");
+		String foodType = sc.next();
+		
+//		Prompt the user to input the rating for gdfood trucks.
+		System.out.println("Please rate this truck (choose between number 1 to number 5 - for one star to five star): ");
+		int truckRating = sc.nextInt();
+
         //Create an array to store FoodTruck objects.
-		FoodTruck foodTruck1 = new FoodTruck(0, "Falafel", "Mediterranean Medic", 3);
+		FoodTruck foodTruck1 = new FoodTruck(0, foodName, foodType, truckRating);
 
 		FoodTruck foodTruck2 = new FoodTruck();
 	    foodTruck2.setTruckID(1);
