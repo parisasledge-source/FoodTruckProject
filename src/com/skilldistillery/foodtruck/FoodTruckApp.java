@@ -18,6 +18,10 @@ public class FoodTruckApp {
 			//Prompt the user to input the food name.
 			System.out.println("Please enter the food name: ");
 			String foodName = sc.next();
+			
+			if (foodName.equals("quit")) {
+				break;
+			}
 				
 			//Prompt the user to input the food type.
 			System.out.println("Please enter the food type: ");
@@ -44,26 +48,13 @@ public class FoodTruckApp {
 			
 		}
 
-//
-//        //Create an array to store FoodTruck objects.
-//		FoodTruck foodTruck1 = new FoodTruck(0, foodName, foodType, truckRating);
-//
-//		FoodTruck foodTruck2 = new FoodTruck();
-//	    foodTruck2.setTruckID(1);
-//	    foodTruck2.setFoodName("Tacos");
-//	    foodTruck2.setFoodType("TacoRific");
-//	    foodTruck2.setTruckRating(5);
+
 //
 //	    //Have the foodTruck display themselves
 //	    foodTruck1.displayFoodTruck();
 //	    foodTruck2.displayFoodTruck();
 //
-//	    String foodTruck1Data = foodTruck1.toString();
-//	    String foodTruck2Data = foodTruck2.toString();
 
-//	    //Get the foodTruck' data and display that
-//	    System.out.println("Food Truck 1 data: " + foodTruck1Data);
-//	    System.out.println("Food Truck 2 data: " + foodTruck2Data);
 	  }
 
 

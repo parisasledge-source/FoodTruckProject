@@ -56,9 +56,9 @@ public class FoodTruck {
 	    return output;
 	  }
 
-	  public void displayFoodTruck() {
-	    String foodTruckData = this.toString();
-	    System.out.println(foodTruckData);
-	  }
+		/*
+		 * public void displayFoodTruck() { String foodTruckData = this.toString();
+		 * System.out.println(foodTruckData); }
+		 */
 
 }
