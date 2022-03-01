@@ -6,6 +6,7 @@ public class FoodTruckApp {
 
 	public static void main(String[] args) {
 		
+		int currentNumberOfTrucks = 0;
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -14,6 +15,7 @@ public class FoodTruckApp {
 		
 		for (int i = 0; i < foodTruckArray.length; i++) {
 			
+			currentNumberOfTrucks = i + 1;
 			
 			//Prompt the user to input the food name.
 			System.out.println("Please enter the food name: ");
@@ -21,32 +23,37 @@ public class FoodTruckApp {
 			
 			if (foodName.equals("quit")) {
 				break;
+			}else {
+				
+				//Prompt the user to input the food type.
+				System.out.println("Please enter the food type: ");
+				String foodType = sc.next();
+				
+				//Prompt the user to input the rating for food trucks.
+				System.out.println("Please rate this truck (choose between 1 to 5 - for 1 star to 5 star): ");
+				int truckRating = sc.nextInt();
+				
+				sc.nextLine();
+				//Set the FoodTruck object's fields to the user's input, and add them to the array.
+				foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
 			}
 				
-			//Prompt the user to input the food type.
-			System.out.println("Please enter the food type: ");
-			String foodType = sc.next();
-				
-			//Prompt the user to input the rating for food trucks.
-			System.out.println("Please rate this truck (choose between 1 to 5 - for 1 star to 5 star): ");
-			int truckRating = sc.nextInt();
-			
-			//Set the FoodTruck object's fields to the user's input, and add them to the array.
-			foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
 			
 			
 		}
-		
 		//List of all existing food trucks.
 		System.out.println("\n");
 		System.out.println("List of all existing food trucks: \n");
 		
-		for (int i = 0; i < foodTruckArray.length; i++) {
+		for (int i = 0; i < (currentNumberOfTrucks-1); i++) {
 			
 			String foodTruckData = foodTruckArray [i].toString();
-		    System.out.println(foodTruckData);
+			System.out.println(foodTruckData);
+		
 			
 		}
+		
+		System.out.println(currentNumberOfTrucks);
 
 
 //
