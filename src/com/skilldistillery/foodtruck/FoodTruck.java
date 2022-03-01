@@ -11,8 +11,7 @@ public class FoodTruck {
 	  }
 	  
 	  //Create fields for a unique numeric id, a food name , food type, and a numeric rating.
-	  public FoodTruck(int truckID, String foodName, String foodType, int truckRating) {
-	    this.truckID = truckID;
+	  public FoodTruck(String foodName, String foodType, int truckRating) {
 	    this.foodName = foodName;
 	    this.foodType = foodType;
 	    this.truckRating = truckRating;
