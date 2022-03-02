@@ -30,8 +30,8 @@ public class FoodTruckApp {
 				String foodType = sc.next();
 				
 				//Prompt the user to input the rating for food trucks.
-				System.out.println("Please rate this truck (choose between 1 to 5 - for 1 star to 5 star): ");
-				int truckRating = sc.nextInt();
+				System.out.println("Please rate this truck (choose between 1 (for 1 star) to 5 (for 5 stars)): ");
+				double truckRating = sc.nextInt();
 				
 				if (truckRating > 5) {
 					System.out.println("Please enter the correct numbr between 1 to 5: ");
@@ -72,8 +72,22 @@ public class FoodTruckApp {
 		double averageRatings = average / num;
 		System.out.println(averageRatings);
 		
+		//Display the highest-rated food truck.
+		System.out.println("\n");
+		System.out.println("Your highest-rated food truck: ");
+		System.out.println("==============================");
+		double highestRated = foodTruckArray [0].getTruckRating();
+		num = 0;
+		for (int i = 0; i < (currentNumberOfTrucks-1); i++) {
+			if ((foodTruckArray[i].getTruckRating()) > highestRated) {
+				highestRated = foodTruckArray [i].getTruckRating();
+				num = i;
+			}
+		}
+		System.out.println(highestRated + " star rated " +  foodTruckArray [num].getFoodType() + " truck." );
 		
-		//System.out.println(currentNumberOfTrucks);
+		
+		
 
 
 //

@@ -6,17 +6,17 @@ public class FoodTruck {
 	  private int truckID;
 	  private String foodName;
 	  private String foodType;
-	  private int truckRating;
+	  private double truckRating;
 	  private double average;
 	
 	  public FoodTruck() {
 	  }
 	  
 	  //Create fields for a unique numeric id, a food name , food type, and a numeric rating.
-	  public FoodTruck(String foodName, String foodType, int truckRating) {
+	  public FoodTruck(String foodName, String foodType, double truckRating2) {
 	    this.foodName = foodName;
 	    this.foodType = foodType;
-	    this.truckRating = truckRating;
+	    this.truckRating = truckRating2;
 	    this.truckID = numericId;
 	    numericId = numericId++;
 	  }
@@ -46,7 +46,7 @@ public class FoodTruck {
 		this.foodType = foodType;
 	}
 
-	public int getTruckRating() {
+	public double getTruckRating() {
 		return truckRating;
 	}
 
