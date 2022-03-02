@@ -2,10 +2,12 @@ package com.skilldistillery.foodtruck;
 
 public class FoodTruck {
 
+	  private int numericId = 1;
 	  private int truckID;
 	  private String foodName;
 	  private String foodType;
 	  private int truckRating;
+	  private double average;
 	
 	  public FoodTruck() {
 	  }
@@ -15,6 +17,8 @@ public class FoodTruck {
 	    this.foodName = foodName;
 	    this.foodType = foodType;
 	    this.truckRating = truckRating;
+	    this.truckID = numericId;
+	    numericId = numericId++;
 	  }
 	  
 
@@ -55,6 +59,10 @@ public class FoodTruck {
 				 + ", Food Type: " + foodType + ", Truck Rating: " + truckRating;
 	    return output;
 	  }
+	//average rating of food trucks
+	public FoodTruck(double average) {
+		this.average = average;
+	}
 
 		/*
 		 * public void displayFoodTruck() { String foodTruckData = this.toString();

@@ -45,24 +45,33 @@ public class FoodTruckApp {
 					sc.nextLine();
 					//Set the FoodTruck object's fields to the user's input, and add them to the array.
 					foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
-				}
-				
+				}				
 			}
-				
-			
-			
 		}
+		
 		//List of all existing food trucks.
 		System.out.println("\n");
-		System.out.println("List of all existing food trucks: \n");
-		
+		System.out.println("List of all existing food trucks: ");
+		System.out.println("=================================");
 		for (int i = 0; i < (currentNumberOfTrucks-1); i++) {
 			
 			String foodTruckData = foodTruckArray [i].toString();
-			System.out.println(foodTruckData);
-		
-			
+			System.out.println(foodTruckData);	
 		}
+		
+		//See the average rating of food trucks.
+		System.out.println("\n");
+		System.out.println("Your average rating of food trucks: ");
+		System.out.println("===================================");
+		double average = 0;
+		int num = 0;
+		for (int i = 0; i < (currentNumberOfTrucks-1); i++) {
+			average += foodTruckArray [i].getTruckRating();
+			num = num + 1;
+		}
+		double averageRatings = average / num;
+		System.out.println(averageRatings);
+		
 		
 		//System.out.println(currentNumberOfTrucks);
 
