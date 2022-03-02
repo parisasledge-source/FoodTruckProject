@@ -21,7 +21,7 @@ public class FoodTruck {
 	    numericId = numericId++;
 	  }
 	  
-
+	  //All getters and setters
 	  public int getTruckID() {
 		return truckID;
 	}
@@ -63,10 +63,5 @@ public class FoodTruck {
 	public FoodTruck(double average) {
 		this.average = average;
 	}
-
-		/*
-		 * public void displayFoodTruck() { String foodTruckData = this.toString();
-		 * System.out.println(foodTruckData); }
-		 */
 
 }
