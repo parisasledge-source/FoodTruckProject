@@ -1,6 +1,7 @@
 ### FoodTruckProject
 
 Food Truck App is a survey app for gathering information about different food trucks and their quality. (:input)
+
 It displays a list of all existing food trucks and the type of their food along with their individual ratings, the average rating of the trucks and the highest rated truck. (:output)
 
 #### Description
