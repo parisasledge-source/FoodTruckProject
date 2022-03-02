@@ -22,7 +22,8 @@ public class FoodTruckApp {
 			}
 			
 			//Prompt the user to input the food truck name.
-			System.out.println("Please enter the food truck name: (for example: 'TacoRific', 'Mediterranean Medic', etc.)");
+			System.out.println("Please enter the food truck name: "
+					+ "(for example: 'TacoRific', 'Mediterranean Medic', etc.)");
 			String foodTruckName = sc.next();
 			
 			if (foodTruckName.equals("quit") || foodTruckName.equals("Quit")) {
@@ -30,15 +31,17 @@ public class FoodTruckApp {
 			}else {
 				
 				//Prompt the user to input the food type.
-				System.out.println("Please enter the food type: (for example: 'Taco', 'Falafel', etc.)");
+				System.out.println("Please enter the food type: "
+						+ "(for example: 'Taco', 'Falafel', etc.)");
 				String foodType = sc.next();
 				
 				//Prompt the user to input the rating for food trucks.
-				System.out.println("Please rate this truck (choose between 1 (for 1 star) to 5 (for 5 stars)): ");
+				System.out.println("Please rate this truck "
+						+ "(choose between 1 (for 1 star) to 5 (for 5 stars)): ");
 				double truckRating = sc.nextInt();
 				
 				if (truckRating > 5) {
-					System.out.println("Please enter the correct numbr between 1 to 5: ");
+					System.out.println("Please enter the correct number between 1 to 5: ");
 					truckRating = sc.nextInt();
 					
 					sc.nextLine();
@@ -109,7 +112,8 @@ public class FoodTruckApp {
 						num = i;
 					}
 				}
-				System.out.println(highestRated + " star rated " +  foodTruckArray [num].getFoodTruckName() + " truck." );
+				System.out.println(highestRated + " star rated " +  foodTruckArray [num].getFoodTruckName() 
+						+ " truck offering " + foodTruckArray [num].getFoodType() + ".");
 			}
 			else {
 				System.out.println("\n");

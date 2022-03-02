@@ -55,8 +55,8 @@ public class FoodTruck {
 	}
 
 	public String toString() {
-		 String output = "Truck ID: " + numericId + ", Food Truck Name: " + foodTruckName 
-				 + ", Food Type: " + foodType + ", Truck Rating: " + truckRating;
+		 String output = "Truck ID: " + truckID + " ----------- Food Truck Name: " + foodTruckName 
+				 + " ----------- Food Type: " + foodType + " ----------- Truck Rating: " + truckRating;
 	    return output;
 	  }
 	//average rating of food trucks
