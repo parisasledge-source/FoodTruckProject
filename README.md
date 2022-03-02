@@ -7,12 +7,15 @@ It displays a list of all existing food trucks and the type of their food along 
 #### Description
 
 The user is prompted to enter a truck name: ("TacoRific", "Mediterranean Medic", etc.), food type ("Tacos", "Falafel", etc.), and the rating for that truck each time he/she is prompted to input data, for up to five times.
+
 Then, the program calculates the average rating of the trucks based on the users's input of each truck's individual rating by adding them all together and dividing the result by the number of the trucks.
 The program also calculates the highest rated truck by comparing the ratings to each other one step at a time.
-The user can input 'quit' or 'Quit' if they decide to have entries or less than 5 trucks. The input 'quit' or 'Quit' can only be entered when the user is prompted for the food truck name.
+
+The user can input 'quit' or 'Quit' if they decide to have entries for less than 5 trucks. The input 'quit' or 'Quit' can only be entered when the user is prompted for the food truck name.
 In that case, input ends immediately and the menu will be displayed.
 The menu is displayed after either user's input for all 5 food trucks or the input for quitting.
-The program will then display a menu from which they can choose to:
+
+The program will display the menu from which the user can choose to:
 
 1. List all existing food trucks.
 2. See the average rating of food trucks.
