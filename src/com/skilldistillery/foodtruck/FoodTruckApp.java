@@ -21,7 +21,7 @@ public class FoodTruckApp {
 			System.out.println("Please enter the food name: ");
 			String foodName = sc.next();
 			
-			if (foodName.equals("quit")) {
+			if (foodName.equals("quit") || foodName.equals("Quit")) {
 				break;
 			}else {
 				
@@ -33,9 +33,20 @@ public class FoodTruckApp {
 				System.out.println("Please rate this truck (choose between 1 to 5 - for 1 star to 5 star): ");
 				int truckRating = sc.nextInt();
 				
-				sc.nextLine();
-				//Set the FoodTruck object's fields to the user's input, and add them to the array.
-				foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
+				if (truckRating > 5) {
+					System.out.println("Please enter the correct numbr between 1 to 5: ");
+					truckRating = sc.nextInt();
+					
+					sc.nextLine();
+					//Set the FoodTruck object's fields to the user's input, and add them to the array.
+					foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
+				}else {
+					
+					sc.nextLine();
+					//Set the FoodTruck object's fields to the user's input, and add them to the array.
+					foodTruckArray [i] = new FoodTruck(foodName, foodType, truckRating);
+				}
+				
 			}
 				
 			
@@ -53,7 +64,7 @@ public class FoodTruckApp {
 			
 		}
 		
-		System.out.println(currentNumberOfTrucks);
+		//System.out.println(currentNumberOfTrucks);
 
 
 //
