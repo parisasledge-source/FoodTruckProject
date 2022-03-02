@@ -2,7 +2,7 @@ package com.skilldistillery.foodtruck;
 
 public class FoodTruck {
 
-	  private int numericId = 1;
+	  private static int numericId = 1;
 	  private int truckID;
 	  private String foodName;
 	  private String foodType;
@@ -13,12 +13,12 @@ public class FoodTruck {
 	  }
 	  
 	  //Create fields for a unique numeric id, a food name , food type, and a numeric rating.
-	  public FoodTruck(String foodName, String foodType, double truckRating2) {
+	  public FoodTruck(String foodName, String foodType, double truckRating) {
 	    this.foodName = foodName;
 	    this.foodType = foodType;
-	    this.truckRating = truckRating2;
-	    this.truckID = numericId;
+	    this.truckRating = truckRating;
 	    numericId = numericId++;
+	    this.truckID = numericId;
 	  }
 	  
 	  //All getters and setters
@@ -55,7 +55,7 @@ public class FoodTruck {
 	}
 
 	public String toString() {
-		 String output = "Truck ID: " + truckID + ", Food Name: " + foodName 
+		 String output = "Truck ID: " + numericId + ", Food Name: " + foodName 
 				 + ", Food Type: " + foodType + ", Truck Rating: " + truckRating;
 	    return output;
 	  }
